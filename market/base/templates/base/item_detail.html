@@ -1,0 +1,11 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+    <h1>{{ item.name }}</h1>
+    <p>Category: {{ item.category }}</p>
+    <p>Price: ${{ item.price }}</p>
+    <p>Date Added: {{ item.date }}</p>
+    <img src="{{ item.image.url }}" alt="{{ item.name }}" width="300">
+    <a href="{% url 'base:update' item.pk %}">Edit</a>
+
+{% endblock content %}
